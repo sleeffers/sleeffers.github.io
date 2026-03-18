@@ -172,18 +172,33 @@
       font-size: 0.97rem;
     }
 
-    .tag {
-      display: inline-block;
-      margin-bottom: 0.55rem;
-      padding: 0.22rem 0.55rem;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--accent);
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.01em;
-    }
+.tag {
+  display: inline-block;
+  margin-bottom: 0.55rem;
+  padding: 0.22rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
 
+/* Published → green */
+.tag.published {
+  background: #e6f4ea;
+  color: #1e7e34;
+}
+
+/* Working paper → blue */
+.tag.working {
+  background: #e8f1fb;
+  color: #1f4f78;
+}
+
+/* Ongoing → orange */
+.tag.ongoing {
+  background: #fff3e6;
+  color: #b35c00;
+}
     footer {
       padding: 2rem 0 3rem;
       color: var(--muted);
@@ -216,7 +231,7 @@
   <main class="wrap">
     <section class="hero" style="border-top: none;">
       <h1>Stefan Leeffers</h1>
-      <div class="subtitle">Lecturer in Development Economics, UCL</div>
+      <div class="subtitle">Lecturer in Disater and Risk Finance, UCL</div>
       <p class="lead">
         I am a development economist in the Department of Risk and Disaster Reduction at
         University College London. My research focuses on social protection, environment,
@@ -234,9 +249,25 @@
     <section id="research">
       <h2>Research</h2>
 
+        <div class="item">
+          <div class="tag published">Published</div>
+          <h3>It Will Rain: The Effect of Information on Flood Preparedness in Urban Mozambique</h3>
+          <p>
+            Accepted in <em>Journal of Development Economics</em>, 2025.
+          </p>
+        </div>
+        
+        <div class="item">
+          <div class="tag published">Published</div>
+          <h3>Does Electoral Observation Influence Electoral Results? Experimental Evidence for Domestic and International Observers in Mozambique</h3>
+          <p>
+            With Pedro C. Vicente. Published in <em>World Development</em>, 2019.
+          </p>
+        </div>
+
       <div class="list">
         <div class="item">
-          <div class="tag">Published</div>
+          <div class="tag published">Published</div>
           <h3>Mobilizing Parents at Home and at School: An African Experiment on Primary Education</h3>
           <p>
             With Vincenzo Di Maro, Danila Serra, and Pedro C. Vicente. Published in
@@ -245,23 +276,7 @@
         </div>
 
         <div class="item">
-          <div class="tag">Published</div>
-          <h3>Does Electoral Observation Influence Electoral Results? Experimental Evidence for Domestic and International Observers in Mozambique</h3>
-          <p>
-            With Pedro C. Vicente. Published in <em>World Development</em>, 2019.
-          </p>
-        </div>
-
-        <div class="item">
-          <div class="tag">Working Paper</div>
-          <h3>It Will Rain: The Effect of Information on Flood Preparedness in Urban Mozambique</h3>
-          <p>
-            Research on how risk information affects household preparedness for urban flooding.
-          </p>
-        </div>
-
-        <div class="item">
-          <div class="tag">Working Paper</div>
+          <div class="tag working">Working Paper</div>
           <h3>Valuing Mangrove Forest Conservation: An Analysis of Rural and Urban Residents’ Willingness to Work and Pay</h3>
           <p>
             With Maria Antonieta Cunha e Sá, Renato Rosa, Ana Rodrigues, Margarida Ortigão,
@@ -270,7 +285,7 @@
         </div>
 
         <div class="item">
-          <div class="tag">Working Paper</div>
+          <div class="tag working">Working Paper</div>
           <h3>Community Involvement in School Governance: Evidence from the Dominican Republic</h3>
           <p>
             With Maria A. Canudo, Vincenzo Di Maro, Gastón Pierri, and Eric Teschke.
@@ -278,7 +293,7 @@
         </div>
 
         <div class="item">
-          <div class="tag">Working Paper</div>
+          <div class="tag working">Working Paper</div>
           <h3>Urbanisation Meets the Environment: Strengthening Local Public Goods Provision for Climate Adaptation</h3>
           <p>
             With Patricia Caetano, Jacob Macdonald, Caroline Miehe, and Pedro C. Vicente.
@@ -286,7 +301,7 @@
         </div>
 
         <div class="item">
-          <div class="tag">Working Paper</div>
+          <div class="tag working">Working Paper</div>
           <h3>Two Wheels to Stay in School: Evidence on Girls’ School Participation from Mozambique’s Bicycle Program</h3>
           <p>
             With Caio Piza, Sammara Cavalcanti Soares, and Alexandre Jordão Chauque.
@@ -294,7 +309,7 @@
         </div>
 
         <div class="item">
-          <div class="tag">Ongoing Project</div>
+          <div class="tag ongoing">Ongoing Project</div>
           <h3>Resilience through Contingency Loans in Savings Groups</h3>
           <p>
             With Francesco Cecchi and Alberto Charrua.
@@ -302,7 +317,7 @@
         </div>
 
         <div class="item">
-          <div class="tag">Ongoing Project</div>
+          <div class="tag ongoing">Ongoing Project</div>
           <h3>Economic Resilience and Social Protection in Vulnerable Communities of Mozambique</h3>
           <p>
             With Dahyeon Jeong, Astrid Zwager, and Steven Glover.
@@ -310,7 +325,7 @@
         </div>
 
         <div class="item">
-          <div class="tag">Ongoing Project</div>
+          <div class="tag ongoing">Ongoing Project</div>
           <h3>Crop Insurance Innovations in Rwanda</h3>
           <p>
             With Anuja Jaitly.

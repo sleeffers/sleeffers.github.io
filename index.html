@@ -1,11 +1,370 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Stefan Leeffers</title>
-  </head>
-  <body>
-    <h1>Hi, I’m Stefan 👋</h1>
-    <p>This is my website.</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stefan Leeffers</title>
+  <meta
+    name="description"
+    content="Stefan Leeffers is a development economist and Lecturer at UCL working on social protection, environment, education, and disaster risk."
+  />
+  <style>
+    :root {
+      --bg: #fcfcfb;
+      --text: #1c1c1c;
+      --muted: #666;
+      --line: #e7e4de;
+      --accent: #1f4f78;
+      --accent-soft: #eef4f8;
+      --max: 920px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .wrap {
+      width: min(var(--max), calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(252, 252, 251, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+      z-index: 10;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.95rem 0;
+      gap: 1rem;
+    }
+
+    .brand {
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: 0.2px;
+    }
+
+    .menu {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+    }
+
+    .hero {
+      padding: 5rem 0 3rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.7rem);
+      line-height: 1.05;
+      margin: 0 0 0.75rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+
+    .subtitle {
+      font-size: 1.15rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+
+    .lead {
+      max-width: 760px;
+      font-size: 1.08rem;
+      color: #2a2a2a;
+      margin-bottom: 1.5rem;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-top: 1.2rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 0.7rem 1rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--text);
+      background: white;
+      transition: 0.2s ease;
+    }
+
+    .button:hover {
+      background: var(--accent-soft);
+      border-color: #d5dee6;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 2.5rem 0;
+      border-top: 1px solid var(--line);
+    }
+
+    h2 {
+      font-size: 1.45rem;
+      margin: 0 0 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    p {
+      margin: 0 0 1rem;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .list {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1.25rem;
+    }
+
+    .item {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 1.1rem 1.15rem;
+    }
+
+    .item h3 {
+      margin: 0 0 0.45rem;
+      font-size: 1.02rem;
+      line-height: 1.4;
+    }
+
+    .item p {
+      margin: 0.35rem 0 0;
+      color: #333;
+      font-size: 0.97rem;
+    }
+
+    .tag {
+      display: inline-block;
+      margin-bottom: 0.55rem;
+      padding: 0.22rem 0.55rem;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+
+    footer {
+      padding: 2rem 0 3rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <div class="brand">Stefan Leeffers</div>
+        <div class="menu">
+          <a href="#about">About</a>
+          <a href="#research">Research</a>
+          <a href="#cv">CV</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" style="border-top: none;">
+      <h1>Stefan Leeffers</h1>
+      <div class="subtitle">Lecturer in Development Economics, UCL</div>
+      <p class="lead">
+        I am a development economist in the Department of Risk and Disaster Reduction at
+        University College London. My research focuses on social protection, environment,
+        education, and disaster risk, with a particular emphasis on Mozambique and other
+        low- and middle-income settings.
+      </p>
+      <div class="links">
+        <a class="button" href="#research">Research</a>
+        <a class="button" href="#cv">Download CV</a>
+        <a class="button" href="mailto:s.leeffers@ucl.ac.uk">Email</a>
+        <a class="button" href="https://github.com/sleeffers" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        I am a Lecturer in the Department of Risk and Disaster Reduction at University College London
+        and an External Member of NOVAFRICA. I completed my PhD in Economics at Nova School of
+        Business and Economics in 2023, after earlier MSc degrees from INSPER and Nova SBE and a BSc
+        in Economics from Tilburg University.
+      </p>
+      <p>
+        My work uses applied microeconomic methods and field-based research to study how institutions,
+        information, and collective action shape welfare and resilience. Across my projects, I examine
+        topics including flood preparedness, mangrove conservation, school governance, agricultural
+        insurance, and social protection.
+      </p>
+    </section>
+
+    <section id="research">
+      <h2>Research</h2>
+
+      <div class="list">
+        <div class="item">
+          <div class="tag">Published</div>
+          <h3>Mobilizing Parents at Home and at School: An African Experiment on Primary Education</h3>
+          <p>
+            With Vincenzo Di Maro, Danila Serra, and Pedro C. Vicente. Published in
+            <em>Economic Development and Cultural Change</em>, 2024.
+          </p>
+        </div>
+
+        <div class="item">
+          <div class="tag">Published</div>
+          <h3>Does Electoral Observation Influence Electoral Results? Experimental Evidence for Domestic and International Observers in Mozambique</h3>
+          <p>
+            With Pedro C. Vicente. Published in <em>World Development</em>, 2019.
+          </p>
+        </div>
+
+        <div class="item">
+          <div class="tag">Working Paper</div>
+          <h3>It Will Rain: The Effect of Information on Flood Preparedness in Urban Mozambique</h3>
+          <p>
+            Research on how risk information affects household preparedness for urban flooding.
+          </p>
+        </div>
+
+        <div class="item">
+          <div class="tag">Working Paper</div>
+          <h3>Valuing Mangrove Forest Conservation: An Analysis of Rural and Urban Residents’ Willingness to Work and Pay</h3>
+          <p>
+            With Maria Antonieta Cunha e Sá, Renato Rosa, Ana Rodrigues, Margarida Ortigão,
+            Luisa Nobre, and Alberto Charrua.
+          </p>
+        </div>
+
+        <div class="item">
+          <div class="tag">Working Paper</div>
+          <h3>Community Involvement in School Governance: Evidence from the Dominican Republic</h3>
+          <p>
+            With Maria A. Canudo, Vincenzo Di Maro, Gastón Pierri, and Eric Teschke.
+          </p>
+        </div>
+
+        <div class="item">
+          <div class="tag">Ongoing Project</div>
+          <h3>Urbanisation Meets the Environment in a Mozambican City</h3>
+          <p>
+            With Patricia Caetano, Jacob Macdonald, Caroline Miehe, and Pedro C. Vicente.
+          </p>
+        </div>
+
+        <div class="item">
+          <div class="tag">Ongoing Project</div>
+          <h3>Evaluation of Bicycle and Uniform Distribution Programs for Girls in Mozambique</h3>
+          <p>
+            With Caio Piza.
+          </p>
+        </div>
+
+        <div class="item">
+          <div class="tag">Ongoing Project</div>
+          <h3>Resilience through Contingency Loans in Savings Groups</h3>
+          <p>
+            With Francesco Cecchi and Alberto Charrua.
+          </p>
+        </div>
+
+        <div class="item">
+          <div class="tag">Ongoing Project</div>
+          <h3>Economic Resilience and Social Protection in Vulnerable Communities of Mozambique</h3>
+          <p>
+            With Dahyeon Jeong, Astrid Zwager, and Steven Glover.
+          </p>
+        </div>
+
+        <div class="item">
+          <div class="tag">Ongoing Project</div>
+          <h3>Crop Insurance Innovations in Rwanda</h3>
+          <p>
+            With Anuja Jaitly.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="cv">
+      <h2>CV</h2>
+      <p>
+        You can download my current curriculum vitae below.
+      </p>
+      <div class="links">
+        <a class="button" href="StefanLeeffers_CV.pdf" target="_blank" rel="noopener noreferrer">Download CV (PDF)</a>
+      </div>
+      <p class="muted" style="margin-top: 1rem;">
+        Tip: upload your PDF CV file to this same GitHub repository so this button works.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        Department of Risk and Disaster Reduction<br />
+        University College London
+      </p>
+      <p>
+        Email: <a href="mailto:s.leeffers@ucl.ac.uk">s.leeffers@ucl.ac.uk</a>
+      </p>
+      <p>
+        Website: <a href="https://www.stefanleeffers.com">www.stefanleeffers.com</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p>© Stefan Leeffers</p>
+  </footer>
+</body>
 </html>

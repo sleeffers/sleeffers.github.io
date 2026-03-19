@@ -101,6 +101,38 @@
       padding: 5rem 0 3rem;
     }
 
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.photo-wrap {
+  width: 280px;
+  height: 320px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+
+.photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+@media (max-width: 700px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-wrap {
+    margin: 0 auto 1.5rem;
+  }
+}
+    
     .hero h1 {
       font-size: clamp(2.2rem, 5vw, 3.7rem);
       line-height: 1.05;
@@ -256,26 +288,40 @@
   </header>
 
   <main class="wrap">
-    <section class="hero" style="border-top: none;">
-<h1>Stefan Leeffers</h1>
-<div class="subtitle">
-  Lecturer in Disaster and Crisis Risk Finance, University College London
-</div>
-<div class="muted">
-  NOVAFRICA Research Affiliate · World Bank Consultant
-</div>
+<section class="hero" style="border-top: none;">
+  <div class="hero-grid">
+
+    <div>
+      <h1>Stefan Leeffers</h1>
+
+      <div class="subtitle">
+        Lecturer in Disaster and Crisis Risk Finance, University College London
+      </div>
+
+      <div class="muted">
+        NOVAFRICA Research Affiliate · World Bank Consultant
+      </div>
+
       <p class="lead">
         I am a development economist in the Department of Risk and Disaster Reduction at
         University College London. My research focuses on social protection, environment,
         education, and disaster risk, with a particular emphasis on Mozambique and other
         low- and middle-income settings.
       </p>
+
       <div class="links">
         <a class="button" href="https://scholar.google.com/citations?user=H0omcAwAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer">Google Scholar</a>
         <a class="button" href="https://profiles.ucl.ac.uk/93288-stefan-leeffers" target="_blank" rel="noopener noreferrer">UCL Profiles</a>
         <a class="button" href="StefanLeeffers_CV.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
       </div>
-    </section>
+    </div>
+
+    <div class="photo-wrap">
+      <img src="photo.jpg" alt="Stefan Leeffers">
+    </div>
+
+  </div>
+</section>
 
     <section id="research">
       <h2>Research</h2>
